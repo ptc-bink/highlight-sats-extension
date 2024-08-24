@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>test (react)</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+
+<body>
+  <div class="card">
+    <div class="header">
+      <h2>
+        <img src="./icons/icon_32.png" width="25px" height="19px" class="Img" alt="Remove this image" />test
+      </h2>
+    </div>
+    <div class="card-body" id="config">
+      <div class="site-setting padding-left">
+        <div class="line-item">
+          <label id="siteInfo" class="site-info"></label>
+          <span class="sub-label">Toggle enable/disable</span>
+        </div>
+        <div class="line-item paddingTop">
+          <input type="checkbox" id="enable-setting" checked=false />
+          <span class="sub-label paddingTop">on/off</span>
+        </div>
+      </div>
+      <div id="configuration" class="tabcontent marginTop">
+        <div class="config-items paddingTop">
+          <label for="palindrome-sats" class="defaultWidth">Palindrome sats</label>
+          <input type="checkbox" id="palindrome-sats" checked=true />
+        </div>
+        <div class="config-items">
+          <label for="black-sats" class="defaultWidth">Black sats</label>
+          <input type="checkbox" id="black-sats" checked=false />
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+
+</html>
