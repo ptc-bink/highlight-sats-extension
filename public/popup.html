@@ -3,39 +3,32 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>test (react)</title>
-  <link rel="stylesheet" href="popup.css" />
+  <title>.prime-seeker</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Mono&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <div class="card">
-    <div class="header">
-      <h2>
-        <img src="./icons/icon_32.png" width="25px" height="19px" class="Img" alt="Remove this image" />test
-      </h2>
-    </div>
-    <div class="card-body" id="config">
-      <div class="site-setting padding-left">
-        <div class="line-item">
-          <label id="siteInfo" class="site-info"></label>
-          <span class="sub-label">Toggle enable/disable</span>
-        </div>
-        <div class="line-item paddingTop">
-          <input type="checkbox" id="enable-setting" checked=false />
-          <span class="sub-label paddingTop">on/off</span>
-        </div>
+  <div id="popup">
+      <div id="title">
+          <span>.prime-seeker</span>
       </div>
-      <div id="configuration" class="tabcontent marginTop">
-        <div class="config-items paddingTop">
-          <label for="palindrome-sats" class="defaultWidth">Palindrome sats</label>
-          <input type="checkbox" id="palindrome-sats" checked=true />
-        </div>
-        <div class="config-items">
-          <label for="black-sats" class="defaultWidth">Black sats</label>
-          <input type="checkbox" id="black-sats" checked=false />
-        </div>
+      <div id="menu">
+          <label id="resource-selector" class="menu-item" for="toggle-checkbox">
+              <label id="siteInfo" for="toggle-checkbox" class="text-label"></label>
+              <input type="checkbox" name="toggle" id="toggle-checkbox"><label for="toggle-checkbox" class="checkbox"></label>
+          </label>
+          <label id="palindrome-toggle" class="menu-item" for="palindrome-checkbox">
+              <label for="palindrome-checkbox" class="text-label">palindrome&nbsp;sats</label>
+              <input type="checkbox" name="palindrome" id="palindrome-checkbox"><label for="palindrome-checkbox" class="checkbox"></label>
+          </label>
+          <label id="black-toggle" class="menu-item" for="black-checkbox">
+              <label for="black-checkbox" class="text-label">black sats</label>
+              <input type="checkbox" name="black" id="black-checkbox"><label for="black-checkbox" class="checkbox"></label>
+          </label>
       </div>
-    </div>
   </div>
   <script src="popup.js"></script>
 </body>

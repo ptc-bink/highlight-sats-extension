@@ -9,13 +9,8 @@ import { Controls } from '../shared/const';
   loadConfigs(hostname);
   Util.getDomElement('siteInfo').innerText = 'www.' + hostname;
 
-  [
-    Controls.blackSats,
-    Controls.palindromeSats,
-  ].forEach((Element) => {
-    Util.getInput(Element).addEventListener('change', () => saveConfig(hostname));
-  });
-
+  Util.getInput(Controls.blackSats).addEventListener('change', () => saveConfig(hostname, 'blackSats'));
+  Util.getInput(Controls.palindromeSats).addEventListener('change', () => saveConfig(hostname, 'palindromeSats'));
   Util.getInput(Controls.enableSetting).addEventListener('change', () => clearConfigAll(hostname));
 })();
 
@@ -31,7 +26,7 @@ function loadConfigs(hostname: string): void {
   });
 }
 
-function saveConfig(hostname: string): void {
+function saveConfig(hostname: string, ele: string): void {
   configStorage.get((configs) => {
     let findPageStyleIndex = configs.pageStyle.findIndex((config) => config.url === hostname);
 
@@ -48,6 +43,19 @@ function saveConfig(hostname: string): void {
     configs.pageStyle[findPageStyleIndex].blackSats = Util.getInput(Controls.blackSats).checked;
     configs.pageStyle[findPageStyleIndex].enableSetting = Util.getInput(Controls.enableSetting).checked;
     configs.pageStyle[findPageStyleIndex].palindromeSats = Util.getInput(Controls.palindromeSats).checked;
+
+    console.log("dfdfdfdfdfdfdfdfd");
+    
+
+    if (ele === 'blackSats' && Util.getInput(Controls.blackSats).checked) {
+      Util.getInput(Controls.palindromeSats).checked = false;
+      configs.pageStyle[findPageStyleIndex].palindromeSats = false;
+    }
+
+    if (ele === 'palindromeSats' && Util.getInput(Controls.palindromeSats).checked) {
+      Util.getInput(Controls.blackSats).checked = false;
+      configs.pageStyle[findPageStyleIndex].blackSats = false;
+    }
 
     configStorage.set(configs);
   });

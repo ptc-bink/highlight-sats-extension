@@ -1,10 +1,10 @@
 {
-    "name": "test (react)",
-    "description": "Chrome extension for customizing any website",
+    "name": ".prime-seeker",
+    "description": "Chrome extension for finding prime numbers on the Website",
     "version": "1.0",
     "manifest_version": 3,
    "action": {
-      "default_title": "test (react)",
+      "default_title": ".prime-seeker",
       "default_popup": "popup.html"
     },
     "content_scripts": [

@@ -1,7 +1,5 @@
 export enum Controls {
-  enableSetting = 'enable-setting',
-  palindromeSats = 'palindrome-sats',
-  blackSats = 'black-sats',
+  enableSetting = 'toggle-checkbox',
+  palindromeSats = 'palindrome-checkbox',
+  blackSats = 'black-checkbox',
 }
-
-export const lists = ['how', 'script']
