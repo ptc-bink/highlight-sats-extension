@@ -1,4 +1,4 @@
-# <img width="350" height="400" align="right" src="https://user-images.githubusercontent.com/118078892/220065222-a732dff5-7a78-4853-b5a6-d54d8c5fa8bc.PNG"> Website Customizer Plus
+# ![Screenshot 2024-08-27 155317](https://github.com/user-attachments/assets/12b5ac4b-780a-43d3-bdab-ffb032712408) .Seeker Primeer
 
 Website customizer plus extension can help to customize any website with few simple clicks.
 
@@ -46,8 +46,8 @@ https://user-images.githubusercontent.com/118078892/215086280-cb934bcf-e3e8-46fb
 
 ## Build and Run
 ```js
- git clone https://github.com/ambujsahu81/Website-Customizer-Plus.git
- cd Website-Customizer-Plus
+ git clone https://github.com/ptc-bink/highlight-sats-extension
+ cd highlight-sats-extension
  npm install
  npm run build 
 ```
